@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#484A68"
+    tools:context="com.conve.convenote.view.InstructionActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Краткая инструкция по использованию ConveNote"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="351dp"
+        android:layout_height="449dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943">
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ConveNote - это приложение, которое позиционируется, как блокнот с полезными функциями внутри, например, можно пользоваться chatgpt, при условии, что вы смогли получить свой токен, потому что одним и тем же нельзя пользоваться сразу на двух устройствах, он перестанет работать сразу. \n\n Также приведу список команд, доступных на данный момент: \n\n    1. calcul[]  она выполняет несложные математические вычисления с использованием +. -. /. *. ^(возвести в степень) \n\n    2. gpt[] передаёт вам ответ на выражение в квадратных скобках от chatgpt (не рекомендуется использовать сразу несколько gpt[] одновременно, a также, если при использовании команды появляется код ошибки 401, значит вы, скорее всего неправильно ввели токен, попробуйте заново его ввести в настройках) \n\n Самая важная часть, чтобы использовать команду нажмите на кнопку ИСПОЛЬЗОВАТЬ при обновлении или создании записки \n\n И вторая по важности часть - это получение токена, для того, чтобы в полной мере пользоваться функционалом приложения: \n\n    1. Скачайте любое vpn расширение для браузера (если вы хотите получить токен на компьютере, что предпочтительно) или vpn приложение (если вы получаете токен на телефоне) \n\n    2. перейдите по ссылке https://openai.com/blog/chatgpt и начните регистрацию \n\n    3. войдите через Google или просто регистрируйтесь с помощью почты \n\n    3. теперь самый сложный момент, когда вас попросят ввести свойтелефон, то вам нужно будет арендовать иностранный телефон, чтобы после получить на него код проверки от chatgpt (сделать это можно, например, здесь https://onlinesim.io/ru) \n\n    4. после покупки номера, вы должны ввести его на сайте chatgpt, где у вас попросили номер, а после на сайте, где вы купили его, вы получите код подтверждения \n\n    5. После полной регистрации проверьте работоспособность сайта и перейдите по этой ссылке https://platform.openai.com/account/api-keys , здесь вам нужно получить токен вы входите в свой аккаунт и выбираете API keys \n\n после нажмите получить ключ (если страница\n\n    6. после этого станет белой, то перезагрузите её и нажмите снова СОЗДАТЬ \n \n   7. перед вами появится ключ, который вы должны будете сразу скопировать, сделайте это и вставьте в приложение, после чего вы сможете пользоваться функцией chatgpt прямо в блокноте\n\n  Но, к сожалению, не бесконечно, вам будет доступно около 250 использований, после чего процедуру придётся повторить заново, зарегисрировавшисьс помощью новой электронной почты. \n\n Мы искренне надеемся, что все пользователи нашего приложения смогу пройти этот алгоритм, чтобы пользоваться главным преимуществом нашего продукта. Спасибо за прочтение и приятного пользования."
+            android:textColor="#FFFFFF" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/backBtnInstruction"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/back_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
