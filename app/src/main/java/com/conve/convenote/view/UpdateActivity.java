@@ -1,6 +1,5 @@
 package com.conve.convenote.view;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -35,17 +34,16 @@ public class UpdateActivity extends AppCompatActivity {
     private String id;
     private TextView loadingText;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        loadingText = findViewById(R.id.loadingText);
         setContentView(R.layout.activity_update);
         commandProcessor = new CommandProcessor();
         handler = new Handler(Looper.getMainLooper());
 
         // присваивание id полям
         title = findViewById(R.id.title);
+        loadingText = findViewById(R.id.loadingTextUpdate);
         description = findViewById(R.id.description);
         updateNote = findViewById(R.id.update_note);
         deleteNote = findViewById(R.id.delete_note);
@@ -114,7 +112,6 @@ public class UpdateActivity extends AppCompatActivity {
                     // удаление заметки
                     database.deleteSingleItem(id); // удаление записи БД по id
                 }
-
                 startActivity(new Intent(UpdateActivity.this, SecondActivity.class)); // переключение обратно в активность демонстрации всех записей
             } else { // иначе просто тост об отсутствии изменений
                 Toast.makeText(UpdateActivity.this, "Изменений не внесено", Toast.LENGTH_SHORT).show();
